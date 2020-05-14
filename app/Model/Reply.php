@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
 {
+    // What must fill when POST
+    // protected $fillable = ['body', 'question_id', 'user_id'];
+
+    // or 
+    protected $guarded = [];
     
     //questions > replies
     public function question(){
