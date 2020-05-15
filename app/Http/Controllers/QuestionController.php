@@ -33,8 +33,9 @@ class QuestionController extends Controller
         // Use this path to create with user loged 'id'
         // auth()->user()->question()->create($request->all());
 
-        Question::create($request->all());
-        return response('Added new question', 200);
+        $question = Question::create($request->all());
+        $question->save();
+        return response(['add new' => $question], 200);
     }
 
     /**
