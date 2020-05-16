@@ -11,8 +11,9 @@ window.Vue = require('vue');
 import Vuetify from 'vuetify';
 Vue.use(Vuetify);
 
+import User from './Helpers/User'
+window.User = User
 
-Vue.use(Vuetify)
 
 /**
  * The following block of code may be used to automatically register your
@@ -26,16 +27,17 @@ Vue.use(Vuetify)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('AppHome', require('./components/AppHome.vue').default);
+import router from './Router/router.js'
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-Vue.use(Vuetify);
 
 const app = new Vue({
     el: "#app",
+    router,
     vuetify: new Vuetify()
   });
 

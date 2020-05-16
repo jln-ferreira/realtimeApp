@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Way to keep in the same page
+Route::view('/', 'home');
+Route::view('/{any}', 'home');
