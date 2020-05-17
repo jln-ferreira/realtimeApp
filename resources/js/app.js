@@ -13,7 +13,7 @@ Vue.use(Vuetify);
 
 import User from './Helpers/User'
 window.User = User
-
+console.log(User.id())
 
 /**
  * The following block of code may be used to automatically register your
@@ -28,6 +28,7 @@ window.User = User
 
 Vue.component('AppHome', require('./components/AppHome.vue').default);
 import router from './Router/router.js'
+import AppStorage from './Helpers/AppStorage';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
